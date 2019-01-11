@@ -1,0 +1,22 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Staatliches');
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  font-family: 'Open Sanes', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Staatliches', cursive;
+}
