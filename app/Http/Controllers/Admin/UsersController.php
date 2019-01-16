@@ -14,8 +14,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
-        exit('here');
+        return view('admin.users.index');
     }
 
     /**
