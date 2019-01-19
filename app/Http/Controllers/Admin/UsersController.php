@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Yajra\DataTables\DataTables;
 
 class UsersController extends Controller
 {
@@ -81,5 +83,13 @@ class UsersController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function datatable()
+    {
+        return Datatables::of(User::query())->make(true);
+
+
+
     }
 }

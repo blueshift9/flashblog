@@ -18,6 +18,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin'], function () {
+
+    Route::get('users/datatable', 'UsersController@datatable');
+
+
     Route::resource('users', 'UsersController');
     Route::resource('posts', 'PostsController');
+
+    //Route::resource('posts', 'PostsController');
 });
+
