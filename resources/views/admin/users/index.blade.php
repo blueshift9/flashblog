@@ -15,27 +15,30 @@
                         <th>Updated At</th>
                     </tr>
                     </thead>
+                    <tbody></tbody>
                 </table>
             </div>
         </div>
     </div>
 
-    <script type="javascript" defer>
-        /*$(function() {
-            $('#table').DataTable({
+
+@endsection
+
+@push('scripts')
+    <script>
+        $(function() {
+            $('#users-table').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: '{{ url('index') }}',
+                ajax: 'http://blog1.test/admin/users/datatable',
                 columns: [
-                    {data: 'id', name: 'id'},
-                    {data: 'name', name: 'name'},
-                    {data: 'email', name: 'email'},
-                    {data: 'created_at', name: 'created_at'},
-                    {data: 'updated_at', name: 'updated_at'},
+                    { data: 'id', name: 'id' },
+                    { data: 'name', name: 'name' },
+                    { data: 'email', name: 'email' },
+                    { data: 'created_at', name: 'created_at' },
+                    { data: 'updated_at', name: 'updated_at' }
                 ]
             });
-
-        });*/
-
+        });
     </script>
-@endsection
+@endpush

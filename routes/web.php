@@ -21,6 +21,8 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin
 
     Route::get('users/datatable', 'UsersController@datatable');
 
+    Route::get('/','DashboardController@index');
+
 
     Route::resource('users', 'UsersController');
     Route::resource('posts', 'PostsController');
