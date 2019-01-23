@@ -29,6 +29,8 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
 
+    <script type="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
 </head>
 <body>
     <div id="app">
@@ -76,7 +78,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ config('app.url') }}/admin">
                                     <span data-feather="home"></span>
-                                    Dashboard <span class="sr-only">(current)</span>
+                                    Dash <span class="sr-only">(current)</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -86,7 +88,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ config('app.url') }}/admin/posts">
+                                <a class="nav-link" href="{{ config('app.url') }}/admin/users">
                                     <span data-feather="users"></span>
                                     Users
                                 </a>
@@ -129,7 +131,7 @@
                     </div>
                 </nav>
 
-                <main class="py-4">
+                <main class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4" role="main">
                     @yield('content')
                 </main>
             </div>

@@ -2,8 +2,7 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="row justify-content-center">
+
             <div class="col-md-12">
                 <table class="table table-bordered" id="users-table">
                     <thead>
@@ -18,8 +17,8 @@
                     <tbody></tbody>
                 </table>
             </div>
-        </div>
-    </div>
+
+
 
 
 @endsection
@@ -30,6 +29,7 @@
             $('#users-table').DataTable({
                 processing: true,
                 serverSide: true,
+                responsive: true,
                 ajax: 'http://blog1.test/admin/users/datatable',
                 columns: [
                     { data: 'id', name: 'id' },

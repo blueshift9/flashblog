@@ -15,6 +15,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background: #FFFFFF;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -88,7 +89,14 @@ h1, h2, h3, h4, h5, h6 {
  */
 
 [role="main"] {
-  padding-top: 48px; /* Space for fixed navbar */
+  margin-top: 48px; /* Space for fixed navbar */ /* was padding */
+  background: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 120px;
+  }
 }
 
 /*
