@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Yajra\DataTables\DataTables;
 
 class PostsController extends Controller
 {
@@ -14,7 +16,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        exit('posts controller works');
+        return view('admin.posts.index');
     }
 
     /**
@@ -81,5 +83,10 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function datatable()
+    {
+        return Datatables::of(Post::query())->make(true);
     }
 }
