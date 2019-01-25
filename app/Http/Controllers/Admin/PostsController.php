@@ -37,7 +37,9 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = Post::create($request->all());
+        return redirect()->action('PostsController@index');
+
     }
 
     /**
