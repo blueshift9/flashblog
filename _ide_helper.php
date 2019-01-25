@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.6.29 on 2018-12-27 00:40:06.
+ * Generated for Laravel 5.6.39 on 2019-01-23 02:17:11.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -1771,7 +1771,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $password
          * @param string $attribute
-         * @return null|bool 
+         * @return bool|null 
          * @static 
          */ 
         public static function logoutOtherDevices($password, $attribute = 'password')
@@ -4393,6 +4393,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param int|null $toLevel
          * @return void 
+         * @throws \Exception
          * @static 
          */ 
         public static function rollBack($toLevel = null)
@@ -5104,6 +5105,18 @@ namespace Illuminate\Support\Facades {
         }
         
         /**
+         * Remove all of the directories within a given directory.
+         *
+         * @param string $directory
+         * @return bool 
+         * @static 
+         */ 
+        public static function deleteDirectories($directory)
+        {
+            return \Illuminate\Filesystem\Filesystem::deleteDirectories($directory);
+        }
+        
+        /**
          * Empty the specified directory of all files and folders.
          *
          * @param string $directory
@@ -5368,7 +5381,7 @@ namespace Illuminate\Support\Facades {
     /**
      * 
      *
-     * @see \Illuminate\Hashing\BcryptHasher
+     * @see \Illuminate\Hashing\HashManager
      */ 
     class Hash {
         
@@ -5840,7 +5853,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function debug($message, $context = array())
@@ -5853,7 +5866,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function info($message, $context = array())
@@ -5866,7 +5879,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function notice($message, $context = array())
@@ -5879,7 +5892,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function warning($message, $context = array())
@@ -5892,7 +5905,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function error($message, $context = array())
@@ -5905,7 +5918,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function critical($message, $context = array())
@@ -5918,7 +5931,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function alert($message, $context = array())
@@ -5931,7 +5944,7 @@ namespace Illuminate\Support\Facades {
          *
          * @param string $message The log message
          * @param array $context The log context
-         * @return Boolean Whether the record has been processed
+         * @return bool Whether the record has been processed
          * @static 
          */ 
         public static function emergency($message, $context = array())
@@ -8545,7 +8558,7 @@ namespace Illuminate\Support\Facades {
          *  * _format request attribute
          *  * $default
          *
-         * @param string $default The default format
+         * @param string|null $default The default format
          * @return string The request format
          * @static 
          */ 
@@ -8670,7 +8683,7 @@ namespace Illuminate\Support\Facades {
          * Checks whether the method is cacheable or not.
          *
          * @see https://tools.ietf.org/html/rfc7231#section-4.2.3
-         * @return bool 
+         * @return bool True for GET and HEAD, false otherwise
          * @static 
          */ 
         public static function isMethodCacheable()
@@ -9560,6 +9573,7 @@ namespace Illuminate\Support\Facades {
      * 
      *
      * @method static \Illuminate\Routing\RouteRegistrar prefix(string  $prefix)
+     * @method static \Illuminate\Routing\RouteRegistrar where(array  $where)
      * @method static \Illuminate\Routing\RouteRegistrar middleware(array|string|null $middleware)
      * @method static \Illuminate\Routing\RouteRegistrar as(string $value)
      * @method static \Illuminate\Routing\RouteRegistrar domain(string $value)
@@ -9800,6 +9814,20 @@ namespace Illuminate\Support\Facades {
         public static function getLastGroupPrefix()
         {
             return \Illuminate\Routing\Router::getLastGroupPrefix();
+        }
+        
+        /**
+         * Add a route to the underlying route collection.
+         *
+         * @param array|string $methods
+         * @param string $uri
+         * @param \Closure|array|string|null $action
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function addRoute($methods, $uri, $action)
+        {
+            return \Illuminate\Routing\Router::addRoute($methods, $uri, $action);
         }
         
         /**
@@ -13629,6 +13657,246 @@ namespace Barryvdh\Debugbar {
  
 }
 
+namespace Intervention\Image\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Image {
+        
+        /**
+         * Overrides configuration settings
+         *
+         * @param array $config
+         * @return self 
+         * @static 
+         */ 
+        public static function configure($config = array())
+        {
+            return \Intervention\Image\ImageManager::configure($config);
+        }
+        
+        /**
+         * Initiates an Image instance from different input types
+         *
+         * @param mixed $data
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function make($data)
+        {
+            return \Intervention\Image\ImageManager::make($data);
+        }
+        
+        /**
+         * Creates an empty image canvas
+         *
+         * @param int $width
+         * @param int $height
+         * @param mixed $background
+         * @return \Intervention\Image\Image 
+         * @static 
+         */ 
+        public static function canvas($width, $height, $background = null)
+        {
+            return \Intervention\Image\ImageManager::canvas($width, $height, $background);
+        }
+        
+        /**
+         * Create new cached image and run callback
+         * (requires additional package intervention/imagecache)
+         *
+         * @param \Closure $callback
+         * @param int $lifetime
+         * @param boolean $returnObj
+         * @return \Image 
+         * @static 
+         */ 
+        public static function cache($callback, $lifetime = null, $returnObj = false)
+        {
+            return \Intervention\Image\ImageManager::cache($callback, $lifetime, $returnObj);
+        }
+         
+    }
+ 
+}
+
+namespace Yajra\DataTables\Facades { 
+
+    /**
+     * 
+     *
+     * @mixin \Yajra\DataTables\DataTables
+     * @see \Yajra\DataTables\DataTables
+     */ 
+    class DataTables {
+        
+        /**
+         * Make a DataTable instance from source.
+         * 
+         * Alias of make for backward compatibility.
+         *
+         * @param mixed $source
+         * @return mixed 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function of($source)
+        {
+            return \Yajra\DataTables\DataTables::of($source);
+        }
+        
+        /**
+         * Make a DataTable instance from source.
+         *
+         * @param mixed $source
+         * @return mixed 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function make($source)
+        {
+            return \Yajra\DataTables\DataTables::make($source);
+        }
+        
+        /**
+         * Get request object.
+         *
+         * @return \Yajra\DataTables\Utilities\Request 
+         * @static 
+         */ 
+        public static function getRequest()
+        {
+            return \Yajra\DataTables\DataTables::getRequest();
+        }
+        
+        /**
+         * Get config instance.
+         *
+         * @return \Yajra\DataTables\Utilities\Config 
+         * @static 
+         */ 
+        public static function getConfig()
+        {
+            return \Yajra\DataTables\DataTables::getConfig();
+        }
+        
+        /**
+         * 
+         *
+         * @deprecated Please use query() instead, this method will be removed in a next version.
+         * @param $builder
+         * @return \Yajra\DataTables\QueryDataTable 
+         * @static 
+         */ 
+        public static function queryBuilder($builder)
+        {
+            return \Yajra\DataTables\DataTables::queryBuilder($builder);
+        }
+        
+        /**
+         * DataTables using Query.
+         *
+         * @param \Illuminate\Database\Query\Builder|mixed $builder
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\QueryDataTable 
+         * @static 
+         */ 
+        public static function query($builder)
+        {
+            return \Yajra\DataTables\DataTables::query($builder);
+        }
+        
+        /**
+         * DataTables using Eloquent Builder.
+         *
+         * @param \Illuminate\Database\Eloquent\Builder|mixed $builder
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\EloquentDataTable 
+         * @static 
+         */ 
+        public static function eloquent($builder)
+        {
+            return \Yajra\DataTables\DataTables::eloquent($builder);
+        }
+        
+        /**
+         * DataTables using Collection.
+         *
+         * @param \Illuminate\Support\Collection|array $collection
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\CollectionDataTable 
+         * @static 
+         */ 
+        public static function collection($collection)
+        {
+            return \Yajra\DataTables\DataTables::collection($collection);
+        }
+        
+        /**
+         * DataTables using Collection.
+         *
+         * @param \Illuminate\Http\Resources\Json\AnonymousResourceCollection|array $collection
+         * @return \Yajra\DataTables\DataTableAbstract|\Yajra\DataTables\ApiResourceDataTable 
+         * @static 
+         */ 
+        public static function resource($resource)
+        {
+            return \Yajra\DataTables\DataTables::resource($resource);
+        }
+        
+        /**
+         * Get html builder instance.
+         *
+         * @return \Yajra\DataTables\Html\Builder 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function getHtmlBuilder()
+        {
+            return \Yajra\DataTables\DataTables::getHtmlBuilder();
+        }
+        
+        /**
+         * Register a custom macro.
+         *
+         * @param string $name
+         * @param object|callable $macro
+         * @return void 
+         * @static 
+         */ 
+        public static function macro($name, $macro)
+        {
+            \Yajra\DataTables\DataTables::macro($name, $macro);
+        }
+        
+        /**
+         * Mix another object into the class.
+         *
+         * @param object $mixin
+         * @return void 
+         * @throws \ReflectionException
+         * @static 
+         */ 
+        public static function mixin($mixin)
+        {
+            \Yajra\DataTables\DataTables::mixin($mixin);
+        }
+        
+        /**
+         * Checks if macro is registered.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasMacro($name)
+        {
+            return \Yajra\DataTables\DataTables::hasMacro($name);
+        }
+         
+    }
+ 
+}
+
 
 namespace  { 
 
@@ -13824,7 +14092,7 @@ namespace  {
              *
              * @param mixed $id
              * @param array $columns
-             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection 
+             * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static|static[] 
              * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
              * @static 
              */ 
@@ -13975,7 +14243,7 @@ namespace  {
              *
              * @param int $count
              * @param callable $callback
-             * @param string $column
+             * @param string|null $column
              * @param string|null $alias
              * @return bool 
              * @static 
@@ -14248,7 +14516,7 @@ namespace  {
              * @param mixed $value
              * @param callable $callback
              * @param callable $default
-             * @return mixed 
+             * @return mixed|$this 
              * @static 
              */ 
             public static function when($value, $callback, $default = null)
@@ -14274,7 +14542,7 @@ namespace  {
              * @param mixed $value
              * @param callable $callback
              * @param callable $default
-             * @return mixed 
+             * @return mixed|$this 
              * @static 
              */ 
             public static function unless($value, $callback, $default = null)
@@ -15974,6 +16242,12 @@ namespace  {
     class View extends \Illuminate\Support\Facades\View {}
 
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+
+    class Datatables extends \Yajra\Datatables\Facades\DataTables {}
+
+    class Image extends \Intervention\Image\Facades\Image {}
+
+    class DataTables extends \Yajra\DataTables\Facades\DataTables {}
  
 }
 

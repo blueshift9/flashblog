@@ -16,6 +16,8 @@ Route::get('/', 'PostsController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin'], function () {
 
@@ -25,8 +27,6 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin
     Route::get('/','DashboardController@index');
 
     //Route::group(['middleware' => 'auth'], function () {
-        Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
-        Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
         // list all lfm routes here...
     //});
 
