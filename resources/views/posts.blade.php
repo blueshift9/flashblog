@@ -14,6 +14,9 @@
                      src="https://placekitten.com/1024/230" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{ $post->title }}</h5>
+                    <em>
+                      by  {{ $post->user->name }} on {{ $post->created_at->format('m-d-Y  H:i') }}
+                    </em>
                     <p class="card-text">{!! $post->description !!}</p>
                     <a href="#" class="btn btn-primary">Read</a>
                 </div>
