@@ -13,7 +13,7 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea id="description" class="form-control" name="description" placeholder="Description"></textarea>
+                <textarea id="description" class="form-control summernote" name="description" placeholder="Description"></textarea>
             </div>
             Active
             <div class="form-check">
@@ -38,6 +38,7 @@
 @push('scripts')
     <script>
         $(function() {
+            $('#description').summernote();
 
         });
     </script>

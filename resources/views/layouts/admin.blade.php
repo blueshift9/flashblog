@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
 
     <script type="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="{{ asset('js/summernote/summernote.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('js/summernote/summernote.css') }}"/>
 
 </head>
 <body>
