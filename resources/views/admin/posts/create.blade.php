@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-lg-6">
         <h2>Create New Post</h2>
         <form method="post" action="{{ url('admin/posts') }}">
             {{ csrf_field() }}
