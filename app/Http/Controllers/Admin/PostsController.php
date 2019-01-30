@@ -37,8 +37,10 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $post = Post::create($request->all());
-        return redirect()->action('PostsController@index');
+        Post::create($request->all());
+        $request->session()->flash('status', 'Post created successfully.');
+
+        return back()->with('success','Item created successfully!');
 
     }
 

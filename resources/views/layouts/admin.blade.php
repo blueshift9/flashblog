@@ -134,6 +134,8 @@
                 </nav>
 
                 <main class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4" role="main">
+                    @include('admin/partials/message')
+
                     @yield('content')
                 </main>
             </div>
