@@ -37,7 +37,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => 'required|unique:posts|max:255',
+            'description' => 'required',
+            'active' => 'required'
+        ]);
         Post::create($request->all());
+
         $request->session()->flash('status', 'Post created successfully.');
 
         return back()->with('success','Item created successfully!');

@@ -9,7 +9,7 @@
 
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Post Title">
+                <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Post Title" required>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
