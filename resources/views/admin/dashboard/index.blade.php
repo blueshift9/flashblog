@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-xs-12">
                 Welcome to your dashboard, @if(Auth::check())
                     {{Auth::user()->name}}
