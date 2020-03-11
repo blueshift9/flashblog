@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" class="container mx-auto">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -71,7 +71,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="my-4">
             @yield('content')
         </main>
     </div>
