@@ -14,11 +14,6 @@
     </div>
 @endsection
 
-
-
-
-
-
 @push('scripts')
     <script>
         $(function() {
@@ -38,7 +33,6 @@
                             return "<a href='http://blog1.test/admin/tags/"+ data+"/edit' class='btn btn-primary'>Edit</a>";
                         },
                     },
-
                 ]
             });
         });

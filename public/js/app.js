@@ -13745,29 +13745,6 @@ module.exports = __webpack_require__(36);
 
 __webpack_require__(12);
 
-// Navbar Toggle
-document.addEventListener('DOMContentLoaded', function () {
-
-    // Get all "navbar-burger" elements
-    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    // Check if there are any navbar burgers
-    if ($navbarBurgers.length > 0) {
-
-        // Add a click event on each of them
-        $navbarBurgers.forEach(function ($el) {
-            $el.addEventListener('click', function () {
-
-                // Get the "main-nav" element
-                var $target = document.getElementById('main-nav');
-
-                // Toggle the class on "main-nav"
-                $target.classList.toggle('hidden');
-            });
-        });
-    }
-});
-
 /***/ }),
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
