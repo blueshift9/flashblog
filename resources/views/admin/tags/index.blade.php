@@ -6,6 +6,8 @@
             <thead>
             <tr>
                 <th>Name</th>
+                <th>Updated At</th>
+                <th>Created At</th>
                 <th>Actions</th>
             </tr>
             </thead>
