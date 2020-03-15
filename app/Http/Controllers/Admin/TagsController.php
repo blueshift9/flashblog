@@ -6,6 +6,7 @@ use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Yajra\DataTables\DataTables;
+
 class TagsController extends Controller
 {
     /**
@@ -83,5 +84,10 @@ class TagsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function datatable()
+    {
+        return Datatables::of(Tag::query())->make(true);
     }
 }

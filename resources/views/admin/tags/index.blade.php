@@ -1,18 +1,23 @@
 @extends('layouts.admin')
 
 @section('content')
-            <div class="col-md-12">
-                <table class="table table-bordered" id="posts-table">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
-            </div>
+    <div class="col-md-12">
+        <table class="table table-bordered" id="tags-table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
 @endsection
+
+
+
+
+
 
 @push('scripts')
     <script>
