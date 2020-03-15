@@ -24,7 +24,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::query()->where('active','=',1)->orderByDesc('id')->with('user')->get();
+        $posts = Post::query()->where('active','=',1)->orderByDesc('id')->with('user')->with('tags')->get();
 
         return view('posts', ['posts' => $posts]);
     }
