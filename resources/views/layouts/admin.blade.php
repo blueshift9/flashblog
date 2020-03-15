@@ -95,6 +95,12 @@
                                     Users
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ config('app.url') }}/admin/tags">
+                                    <span data-feather="tag"></span>
+                                    Tags
+                                </a>
+                            </li>
 
                         </ul>
 

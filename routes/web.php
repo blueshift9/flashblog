@@ -23,6 +23,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin
 
     Route::get('users/datatable', 'UsersController@datatable');
     Route::get('posts/datatable', 'PostsController@datatable');
+    Route::get('tags/datatable', 'TagsController@datatable');
 
     Route::get('/','DashboardController@index');
 
@@ -33,6 +34,7 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'auth', 'prefix' => 'admin
 
     Route::resource('users', 'UsersController');
     Route::resource('posts', 'PostsController');
+    Route::resource('tags', 'TagsController');
 
     //Route::resource('posts', 'PostsController');
 });
