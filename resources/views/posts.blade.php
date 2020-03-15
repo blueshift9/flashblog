@@ -2,11 +2,8 @@
 
 @section('content')
 <div class="container">
-    <div class="">
-            <h1>Latest Posts</h1>
-    </div>
         @foreach($posts as $post)
-            <div id="post-{{ $post->id }}" class="max-w rounded overflow-hidden shadow-lg my-16 bg-white">
+            <div id="post-{{ $post->id }}" class="max-w rounded overflow-hidden shadow-lg my-16 mx-2 bg-white">
                 <img id="post-image-{{ $post->id }}" class="w-full"
                      src="https://placekitten.com/1024/230" alt="Card image cap">
                 <div class="px-6 py-4">

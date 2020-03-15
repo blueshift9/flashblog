@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-300">
-<div class="border-b border-indigo-darkest bg-teal py-4 px-3">
+<div class="border-b border-indigo-darkest bg-teal py-4 px-20">
     <div class="container mx-auto">
         <nav class="flex items-center justify-between flex-wrap">
             <div class="flex items-center flex-no-shrink text-dark mr-6">
@@ -34,7 +34,7 @@
             </div>
             <div id="main-nav" class="w-full flex-grow sm:flex items-center sm:w-auto hidden">
                 <div class="text-sm sm:flex-grow">
-                    <a href="#" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 text-grey-lighter hover:text-grey-light mr-4">
+                    <a href="{{ route('login') }}" class="no-underline font-bold block mt-4 sm:inline-block sm:mt-0 text-grey-lighter hover:text-grey-light mr-4">
                         Admin
                     </a>
 
