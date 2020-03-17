@@ -12,6 +12,10 @@
                 <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Post Title" required>
             </div>
             <div class="form-group">
+                <label for="excerpt">Excerpt</label>
+                <textarea id="excerpt" class="form-control summernote" name="excerpt" placeholder="excerpt"></textarea>
+            </div>
+            <div class="form-group">
                 <label for="description">Description</label>
                 <textarea id="description" class="form-control summernote" name="description" placeholder="Description"></textarea>
             </div>
@@ -63,7 +67,7 @@
                 });
                 return button.render();
             };
-            $('#description').summernote({
+            $('#description, #excerpt').summernote({
                 toolbar: [
                     ['popovers', ['lfm']],
                     ['style', ['bold', 'italic', 'underline', 'clear']],
