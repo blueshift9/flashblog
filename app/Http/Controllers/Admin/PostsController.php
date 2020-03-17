@@ -69,7 +69,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = \App\Post::find($id);
+        return view('admin.posts.edit', ['post' => $post]);
+
     }
 
     /**
@@ -81,7 +83,16 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = \App\Post::find($id);
+
+        $post->update([
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
+        $post->save();
+
+        return redirect('/admin/posts')->with('success', 'Post updated!');
+
     }
 
     /**
