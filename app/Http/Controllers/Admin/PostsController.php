@@ -87,6 +87,7 @@ class PostsController extends Controller
 
         $post->update([
             'title' => $request->title,
+            'excerpt' => $request->excerpt,
             'description' => $request->description,
         ]);
         $post->save();

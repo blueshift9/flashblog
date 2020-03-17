@@ -6,11 +6,15 @@
         <h2>Edit Post</h2>
         <form method="post" action="{{ route('posts.update', $post->id) }}">
             @method('PATCH')
-
+{{ $post }}
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" value="{{ $post->title }}" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Post Title" required>
+            </div>
+            <div class="form-group">
+                <label for="excerpt">Excerpt</label>
+                <textarea id="excerpt" class="form-control summernote" name="excerpt" placeholder="excerpt">{{ $post->excerpt }}</textarea>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
@@ -64,7 +68,7 @@
                 });
                 return button.render();
             };
-            $('#description').summernote({
+            $('#description, #excerpt').summernote({
                 toolbar: [
                     ['popovers', ['lfm']],
                     ['style', ['bold', 'italic', 'underline', 'clear']],
