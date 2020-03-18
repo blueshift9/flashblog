@@ -102,8 +102,9 @@
                     class="md:block text-left md:pb-2 text-gray-700 mr-0 inline-block whitespace-no-wrap text-sm uppercase font-bold p-4 px-0"
                     href="javascript:void(0)"
             >
-                Tailwind Starter Kit
+                {{ config('app.name') }}
             </a>
+{{--
             <ul class="md:hidden items-center flex flex-wrap list-none">
                 <li class="inline-block relative">
                     <a
@@ -181,6 +182,7 @@
                     </div>
                 </li>
             </ul>
+--}}
             <div
                     class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
                     id="example-collapse-sidebar"
@@ -194,7 +196,7 @@
                                     class="md:block text-left md:pb-2 text-gray-700 mr-0 inline-block whitespace-no-wrap text-sm uppercase font-bold p-4 px-0"
                                     href="javascript:void(0)"
                             >
-                                Tailwind Starter Kit
+                                {{ config('app.name') }}
                             </a>
                         </div>
                         <div class="w-6/12 flex justify-end">
@@ -239,7 +241,7 @@
                                 class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                                 href="{{ config('app.url') }}/admin/users"
                         ><i class="fas fa-user-circle text-gray-500 mr-2 text-sm"></i>
-                            Profile Page</a
+                            Users</a
                         >
                     </li>
                     <li class="items-center">
@@ -247,7 +249,7 @@
                                 class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                                 href="{{ config('app.url') }}/admin/tags"
                         ><i class="fas fa-fingerprint text-gray-500 mr-2 text-sm"></i>
-                            Login</a
+                            Tags</a
                         >
                     </li>
                 </ul>

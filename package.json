@@ -25,5 +25,8 @@
         "tailwindcss": "^1.2.0",
         "vue": "^2.5.7"
     },
-    "dependencies": {}
+    "dependencies": {
+        "ajv": "^6.12.0",
+        "imagemin": "^7.0.1"
+    }
 }

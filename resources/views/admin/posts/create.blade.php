@@ -2,8 +2,14 @@
 
 @section('content')
 
-    <div class="col-xs-12 col-lg-6">
-        <h2>Create New Post</h2>
+    <div class="bg-white flex flex-auto rounded p-4">
+        Coming later
+    </div>
+    <div class="bg-white flex flex-auto rounded mt-4 mb-4 min-h-screen p-4">
+        <h2 class="">Create New Post</h2>
+    </div>
+
+{{--
         <form method="post" action="{{ url('admin/posts') }}">
             {{ csrf_field() }}
 
@@ -35,7 +41,7 @@
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-    </div>
+--}}
 
 @endsection
 
