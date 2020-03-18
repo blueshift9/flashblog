@@ -21,6 +21,9 @@
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 
+    <script src="https://kit.fontawesome.com/1a954aa436.js" crossorigin="anonymous"></script>
+
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet" type="text/css">

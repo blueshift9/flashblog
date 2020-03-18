@@ -6,7 +6,6 @@
         <h2>Edit Post</h2>
         <form method="post" action="{{ route('posts.update', $post->id) }}">
             @method('PATCH')
-{{ $post }}
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="title">Title</label>
