@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 
 @section('content')
+
+    <a class="btn btn-primary">Create</a>
+
     <div class="col-md-12">
         <table class="table table-bordered" id="posts-table">
             <thead>
