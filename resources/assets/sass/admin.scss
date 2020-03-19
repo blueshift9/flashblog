@@ -13,6 +13,15 @@
 .form-control {
   @apply mb-4;
 }
+
+.admin-header {
+  @apply bg-white flex flex-auto rounded p-4;
+}
+
+.admin-body {
+  @apply bg-white flex flex-auto rounded mt-4 mb-4 min-h-screen p-4;
+}
+
 @tailwind components;
 
 

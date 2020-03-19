@@ -1,13 +1,11 @@
 @extends('layouts.admin')
 
+@section('header')
+        <h2>Create New Post</h2>
+@endsection
+
 @section('content')
 
-    <div class="bg-white flex flex-auto rounded p-4">
-        <h2>Create New Post</h2>
-    </div>
-    <div class="bg-white flex flex-auto rounded mt-4 mb-4 min-h-screen p-4">
-
-        <br>
         <form method="post" action="{{ url('admin/posts') }}">
             {{ csrf_field() }}
             <label class="block form-control">
@@ -24,13 +22,10 @@
 
             <label for="description" class="block form-control">
                 <span class="text-gray-700">Body</span>
-                <div class="editor">
+                {{--<div class="editor">--}}
                     <textarea id="description"  class="form-textarea mt-1 block w-full"  name="description" placeholder="description" rows="10"></textarea>
-                </div>
+                {{--</div>--}}
             </label>
-
-
-
 
             <div class="block form-control">
                 <span class="text-gray-700">Active</span>
@@ -54,47 +49,13 @@
                 <i class="fas fa-plus"></i> Create Post
             </button>
         </form>
-    </div>
-
-{{--
-        <form method="post" action="{{ url('admin/posts') }}">
-
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" name="title" aria-describedby="title" placeholder="Post Title" required>
-            </div>
-            <div class="form-group">
-                <label for="excerpt">Excerpt</label>
-                <textarea id="excerpt" class="form-control summernote" name="excerpt" placeholder="excerpt"></textarea>
-            </div>
-            <div class="form-group">
-                <label for="description">Description</label>
-                <textarea id="description" class="form-control summernote" name="description" placeholder="Description"></textarea>
-            </div>
-            Active
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="active" id="active-yes" value="1" checked>
-                <label class="form-check-label" for="active-yes">
-                    Yes
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="active" id="active-no" value="0">
-                <label class="form-check-label" for="active-no">
-                    No
-                </label>
-            </div>
-            <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
---}}
 
 @endsection
 
 @push('scripts')
     <script>
         $(function() {
-            var toolbarOptions = [
+           /* var toolbarOptions = [
                 ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
                 ['blockquote', 'code-block'],
 
@@ -114,14 +75,14 @@
                 ['clean']                                         // remove formatting button
             ];
             var options = {
-                debug: 'info',
+                //debug: 'info',
                 modules: {
                     toolbar: toolbarOptions
                 },
                 placeholder: 'Post Body',
                 theme: 'snow'
             };
-            var editor = new Quill('.editor', options);
+            var editor = new Quill('.editor', options);*/
             // Define function to open filemanager window
            /* var lfm = function(options, cb) {
                 var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
