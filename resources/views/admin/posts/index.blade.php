@@ -2,7 +2,9 @@
 
 @section('content')
 
-    <a class="btn btn-primary">Create</a>
+    <a href="" class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease">
+        <i class="fas fa-plus"></i> Create Post
+    </a>
 
     <div class="col-md-12">
         <table class="table table-bordered" id="posts-table">

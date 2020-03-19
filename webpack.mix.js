@@ -10,11 +10,11 @@ let mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
-const tailwindcss = require('tailwindcss')
+const tailwindcss = require('tailwindcss');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    //.sass('resources/assets/sass/app.scss', 'public/css')
-   //.sass('resources/assets/sass/admin.scss', 'public/css')
+   .sass('resources/assets/sass/admin.scss', 'public/css')
    .copyDirectory('resources/assets/js/summernote','public/js/summernote')
     .sass('resources/assets/sass/app.scss', 'public/css')
     .options({

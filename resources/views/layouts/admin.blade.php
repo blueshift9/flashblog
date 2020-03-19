@@ -29,20 +29,21 @@
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-{{--
+
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
---}}
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/tailwind.min.css">
 
 
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
 
-{{--
-    <script type="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
---}}
-    <script src="{{ asset('js/summernote/summernote-bs4.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('js/summernote/summernote-bs4.css') }}"/>
+    {{--<script src="{{ asset('js/summernote/summernote-bs4.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('js/summernote/summernote-bs4.css') }}"/>--}}
+
+    <script src="//cdn.quilljs.com/1.0.0/quill.min.js"></script>
+    <link href="//cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+
 
 </head>
 <body class="bg-gray-200">
@@ -184,7 +185,7 @@
             </ul>
 --}}
             <div
-                    class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
+                    class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
                     id="example-collapse-sidebar"
             >
                 <div
@@ -222,9 +223,9 @@
                 <ul class="md:flex-col md:min-w-full flex flex-col list-none">
                     <li class="items-center">
                         <a
-                                class="text-pink-500 hover:text-pink-600 text-xs uppercase py-3 font-bold block"
+                                class="text-blue-500 hover:text-blue-600 text-xs uppercase py-3 font-bold block"
                                 href="{{ config('app.url') }}/admin"
-                        ><i class="fas fa-tv opacity-75 mr-2 text-sm"></i>
+                        ><i class="fas fa-home opacity-75 mr-2 text-sm"></i>
                             Admin Home</a
                         >
                     </li>
@@ -248,7 +249,7 @@
                         <a
                                 class="text-gray-800 hover:text-gray-600 text-xs uppercase py-3 font-bold block"
                                 href="{{ config('app.url') }}/admin/tags"
-                        ><i class="fas fa-fingerprint text-gray-500 mr-2 text-sm"></i>
+                        ><i class="fas fa-tag text-gray-500 mr-2 text-sm"></i>
                             Tags</a
                         >
                     </li>
