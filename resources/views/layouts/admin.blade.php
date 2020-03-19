@@ -19,7 +19,9 @@
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>--}}
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+{{--
     <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+--}}
 
     <script src="https://kit.fontawesome.com/1a954aa436.js" crossorigin="anonymous"></script>
 
@@ -321,11 +323,11 @@
 
         <div class="px-4 md:px-10 mx-auto w-full">
             @include('admin/partials/message')
-            <div class="admin-header">
+            <div class="admin-header shadow">
                 @yield('header')
             </div>
 
-            <div class="admin-body">
+            <div class="admin-body shadow">
                 @yield('content')
             </div>
         </div>

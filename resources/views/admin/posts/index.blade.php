@@ -1,13 +1,14 @@
 @extends('layouts.admin')
 
+@section('header')
+    <h2>Posts</h2> |
+    <a href="{{ route('posts.create') }}">Create Post</a>
+@endsection
+
 @section('content')
 
-    <a href="" class="bg-green-500 text-white active:bg-green-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease">
-        <i class="fas fa-plus"></i> Create Post
-    </a>
-
-    <div class="col-md-12">
-        <table class="table table-bordered" id="posts-table">
+    <div class="w-full-max-w-full">
+        <table class="table-auto" id="posts-table">
             <thead>
             <tr>
                 <th>Title</th>
@@ -21,31 +22,34 @@
             <tbody></tbody>
         </table>
     </div>
+
 @endsection
 
 @push('scripts')
     <script>
-        $(function() {
+        $(function () {
             $('#posts-table').DataTable({
                 processing: true,
                 serverSide: true,
                 responsive: true,
                 ajax: 'http://blog1.test/admin/posts/datatable',
                 columns: [
-                    { data: 'title', name: 'title' },
-                    { data: 'description', name: 'description' },
-                    { data: 'active', name: 'active' },
-                    { data: 'created_at', name: 'created_at' },
-                    { data: 'updated_at', name: 'updated_at' },
+                    {data: 'title', name: 'title'},
+                    {data: 'description', name: 'description'},
+                    {data: 'active', name: 'active'},
+                    {data: 'created_at', name: 'created_at'},
+                    {data: 'updated_at', name: 'updated_at'},
                     {
                         class: 'text-center',
                         data: 'id',
-                        name: 'id', 'render': function ( data, type, row ) {
-                            return "<a href='http://blog1.test/admin/posts/"+ data+"/edit' class='btn btn-primary'>Edit</a>";
+                        name: 'id', 'render': function (data, type, row) {
+                            return "<a href='http://blog1.test/admin/posts/" + data + "/edit' class='btn-submit'>Edit</a>";
                         },
                     },
 
-                ]
+                ],
+                "order": [[4, "desc"]]
+
             });
         });
     </script>

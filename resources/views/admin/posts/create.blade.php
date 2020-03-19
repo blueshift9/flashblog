@@ -27,7 +27,7 @@
                 {{--</div>--}}
             </label>
 
-            <div class="block form-control">
+            {{--<div class="block form-control">
                 <span class="text-gray-700">Active</span>
                 <div class="mt-2">
                     <div>
@@ -43,7 +43,7 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </div>--}}
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
             <button  type="submit" class="btn-submit form-control">
                 <i class="fas fa-plus"></i> Create Post
