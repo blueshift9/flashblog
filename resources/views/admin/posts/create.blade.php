@@ -3,10 +3,23 @@
 @section('content')
 
     <div class="bg-white flex flex-auto rounded p-4">
-        Coming later
+        <h2>Create New Post</h2>
     </div>
     <div class="bg-white flex flex-auto rounded mt-4 mb-4 min-h-screen p-4">
-        <h2 class="">Create New Post</h2>
+
+        <br>
+        <form method="post" action="{{ url('admin/posts') }}">
+            <label class="block">
+                <span class="text-gray-700">Title</span>
+                <input type="text" class="form-input mt-1 block w-full" id="title" name="title" aria-describedby="title" placeholder="title">
+            </label>
+
+            <label for="excerpt" class="block">
+                <span class="text-gray-700">Excerpt</span>
+                <textarea id="excerpt" class="" name="excerpt" placeholder="excerpt"></textarea>
+
+            </label>
+        </form>
     </div>
 
 {{--

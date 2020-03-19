@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "ajv": "^6.12.0",
+        "alloyeditor": "^2.11.6",
         "imagemin": "^7.0.1"
     }
 }
