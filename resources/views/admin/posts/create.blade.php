@@ -30,7 +30,7 @@
                 <span class="text-gray-700">Tags</span>
                 <div class="mt-2">
                     <div>
-                        <select id="tags" name="tags" class="form-multiselect mt-1 block w-full" multiple="multiple">
+                        <select id="tags" name="tags[]" class="form-multiselect mt-1 block w-full" multiple="multiple">
                             <option value="0"></option>
                             @foreach($tags as $tag)
                                 <option value="{{ $tag->id }}">{{ $tag->name }}</option>
