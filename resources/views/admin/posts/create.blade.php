@@ -27,6 +27,20 @@
             </label>
 
             <div class="block form-control">
+                <span class="text-gray-700">Tags</span>
+                <div class="mt-2">
+                    <div>
+                        <select id="tags" name="tags" class="form-multiselect mt-1 block w-full" multiple="multiple">
+                            <option value="0"></option>
+                            @foreach($tags as $tag)
+                                <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block form-control">
                 <span class="text-gray-700">Active</span>
                 <div class="mt-2">
                     <div>
@@ -54,34 +68,11 @@
 @push('scripts')
     <script>
         $(function() {
-           /* var toolbarOptions = [
-                ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-                ['blockquote', 'code-block'],
 
-                [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-                [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-                [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-                [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-                [{ 'direction': 'rtl' }],                         // text direction
+            $("#tags").select2({
+                tags: false
+            });
 
-                [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-                [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-                [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-                [{ 'font': [] }],
-                [{ 'align': [] }],
-
-                ['clean']                                         // remove formatting button
-            ];
-            var options = {
-                //debug: 'info',
-                modules: {
-                    toolbar: toolbarOptions
-                },
-                placeholder: 'Post Body',
-                theme: 'snow'
-            };
-            var editor = new Quill('.editor', options);*/
             // Define function to open filemanager window
            /* var lfm = function(options, cb) {
                 var route_prefix = (options && options.prefix) ? options.prefix : '/laravel-filemanager';
@@ -107,20 +98,8 @@
                 });
                 return button.render();
             };
-            $('#description, #excerpt').summernote({
-                toolbar: [
-                    ['popovers', ['lfm']],
-                    ['style', ['bold', 'italic', 'underline', 'clear']],
-                    ['font', ['strikethrough', 'superscript', 'subscript']],
-                    ['fontsize', ['fontsize']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['height', ['height']],
-                ],
-                buttons: {
-                    lfm: LFMButton
-                }
-            });*/
+
+            */
 
         });
     </script>
