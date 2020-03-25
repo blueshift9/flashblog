@@ -43,8 +43,11 @@
     {{--<script src="{{ asset('js/summernote/summernote-bs4.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('js/summernote/summernote-bs4.css') }}"/>--}}
 
-    <script src="//cdn.quilljs.com/1.0.0/quill.min.js"></script>
-    <link href="//cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
+    {{--<script src="//cdn.quilljs.com/1.0.0/quill.min.js"></script>
+    <link href="//cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">--}}
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.js"></script>
 
 
 </head>

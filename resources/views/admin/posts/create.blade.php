@@ -22,12 +22,11 @@
 
             <label for="description" class="block form-control">
                 <span class="text-gray-700">Body</span>
-                {{--<div class="editor">--}}
-                    <textarea id="description"  class="form-textarea mt-1 block w-full"  name="description" placeholder="description" rows="10"></textarea>
-                {{--</div>--}}
+                <input id="description" type="hidden" name="description" placeholder="Post Body" {{--class="form-textarea mt-1 block w-full"--}}>
+                <trix-editor input="description"></trix-editor>
             </label>
 
-            {{--<div class="block form-control">
+            <div class="block form-control">
                 <span class="text-gray-700">Active</span>
                 <div class="mt-2">
                     <div>
@@ -43,7 +42,7 @@
                         </label>
                     </div>
                 </div>
-            </div>--}}
+            </div>
             <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"/>
             <button  type="submit" class="btn-submit form-control">
                 <i class="fas fa-plus"></i> Create Post

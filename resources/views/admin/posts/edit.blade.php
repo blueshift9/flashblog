@@ -24,7 +24,12 @@
         <label for="description" class="block form-control">
             <span class="text-gray-700">Body</span>
             {{--<div class="editor">--}}
+{{--
             <textarea id="description"  class="form-textarea mt-1 block w-full"  name="description" placeholder="description" rows="10">{{ $post->description }}</textarea>
+--}}
+
+            <input id="description" type="hidden" name="description" placeholder="Post Body" value="{{ $post->description }}" {{--class="form-textarea mt-1 block w-full"--}}>
+            <trix-editor input="description"></trix-editor>
             {{--</div>--}}
         </label>
 
