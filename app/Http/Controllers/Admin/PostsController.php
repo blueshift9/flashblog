@@ -7,8 +7,8 @@ use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use Yajra\DataTables\DataTables;
-
+//use Yajra\DataTables\DataTables;
+use DataTables;
 class PostsController extends Controller
 {
     /**
@@ -117,6 +117,8 @@ class PostsController extends Controller
 
     public function datatable()
     {
-        return Datatables::of(Post::query())->make(true);
+        $model = Post::query()->with('user');
+
+        return DataTables::eloquent($model)->toJson();
     }
 }

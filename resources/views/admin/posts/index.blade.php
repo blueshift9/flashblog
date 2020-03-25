@@ -12,7 +12,7 @@
             <thead>
             <tr>
                 <th>Title</th>
-                <th>Description</th>
+                <th>Author</th>
                 <th>Active</th>
                 <th>Created At</th>
                 <th>Updated At</th>
@@ -35,7 +35,7 @@
                 ajax: 'http://blog1.test/admin/posts/datatable',
                 columns: [
                     {data: 'title', name: 'title'},
-                    {data: 'description', name: 'description'},
+                    {data: 'user.name', name: 'description'},
                     {data: 'active', name: 'active'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'updated_at', name: 'updated_at'},
