@@ -19,9 +19,6 @@
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>--}}
     <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-{{--
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
---}}
 
     <script src="https://kit.fontawesome.com/1a954aa436.js" crossorigin="anonymous"></script>
 
@@ -31,20 +28,11 @@
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/tailwind.min.css">
 
-
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
-
-    {{--<script src="{{ asset('js/summernote/summernote-bs4.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset('js/summernote/summernote-bs4.css') }}"/>--}}
-
-    {{--<script src="//cdn.quilljs.com/1.0.0/quill.min.js"></script>
-    <link href="//cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">--}}
 
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/1.2.1/trix.js"></script>
