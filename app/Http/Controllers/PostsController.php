@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class PostsController extends Controller
 {
@@ -20,12 +21,19 @@ class PostsController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
         $posts = Post::query()->where('active','=',1)->orderByDesc('id')->with('user')->with('tags')->get();
 
         return view('posts', ['posts' => $posts]);
+    }
+
+    public function show($slug)
+    {
+        $post = Post::query()->where('slug','=',$slug)->with('user')->with('tags')->get();
+
+        return view('post', ['post' => $post]);
     }
 }
