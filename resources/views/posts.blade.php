@@ -7,7 +7,9 @@
                 <img id="post-image-{{ $post->id }}" class="w-full"
                      src="https://placekitten.com/1024/230" alt="Card image cap">
                 <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 post-title">{{ $post->title }}</div>
+                    <div class="font-bold text-xl mb-2 post-title">
+                        <a href="{{--{{ route($post->slug) }}--}}">{{ $post->title }}</a>
+                        </div> {{ $post->slug }}
                     <p class="text-gray-600 text-base">
                         {!! $post->description !!}
                     </p>

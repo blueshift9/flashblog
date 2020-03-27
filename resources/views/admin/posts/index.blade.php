@@ -35,7 +35,7 @@
                 ajax: 'http://blog1.test/admin/posts/datatable',
                 columns: [
                     {data: 'title', name: 'title'},
-                    {data: 'user.name', name: 'description'},
+                    {data: 'user.first_name', name: 'description'},
                     {data: 'active', name: 'active'},
                     {data: 'created_at', name: 'created_at'},
                     {data: 'updated_at', name: 'updated_at'},
