@@ -1,6 +1,6 @@
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Staatliches');
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans|Staatliches');
 
 // Variables
 //@import "variables";
@@ -21,10 +21,20 @@
 
 @tailwind utilities;
 
-body {
+/*body {
   font-family: 'Open Sans', sans-serif;
+}*/
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6, .post-title {
+/*h1, h2, h3, h4, h5, h6, .post-title {
   font-family: 'Staatliches', cursive;
+}*/
+
+h1, h2, h3, h4, h5, h6, .post-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
 }

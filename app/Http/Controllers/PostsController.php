@@ -32,7 +32,7 @@ class PostsController extends Controller
 
     public function show($slug)
     {
-        $post = Post::query()->where('slug','=',$slug)->with('user')->with('tags')->get();
+        $post = Post::query()->where('slug','=',$slug)->with('user')->with('tags')->firstOrFail();
 
         return view('post', ['post' => $post]);
     }
