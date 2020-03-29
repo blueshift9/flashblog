@@ -13747,7 +13747,7 @@ module.exports = __webpack_require__(37);
 __webpack_require__(12);
 
 // Navbar Toggle
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
 
     // Get all "navbar-burger" elements
     var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -13764,10 +13764,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Toggle the class on "main-nav"
                 $target.classList.toggle('hidden');
+
             });
         });
     }
-});
+
+});*/
 
 /***/ }),
 /* 12 */

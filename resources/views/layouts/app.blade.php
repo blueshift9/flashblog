@@ -25,7 +25,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-gray-300">
-<div class="border-b border-indigo-darkest bg-teal py-4 px-20">
+{{--<div class="border-b border-indigo-darkest bg-teal py-4 px-20">
     <div class="container mx-auto">
         <nav class="flex items-center justify-between flex-wrap">
             <div class="flex items-center flex-no-shrink text-dark mr-6">
@@ -46,9 +46,23 @@
             </div>
         </nav>
     </div>
-</div>
-    <div id="app" class="container mx-auto">
+</div>--}}
 
+
+    <div id="app" class="container mx-auto">
+        <nav class="bg-white px-8 pt-2 shadow-md mx-2">
+            <div class="-mb-px flex justify-center">
+                <a class="no-underline text-teal-dark border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    Home
+                </a>
+                <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    About
+                </a>
+                <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
+                    Contact
+                </a>
+            </div>
+        </nav>
         <main class="my-4">
             @yield('content')
         </main>
