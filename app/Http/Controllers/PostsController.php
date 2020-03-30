@@ -24,9 +24,14 @@ class PostsController extends Controller
      * @return Response
      */
     public function index()
-    {
-        $posts = Post::query()->where('active','=',1)->orderByDesc('id')->with('user')->with('tags')->paginate(5);
 
+    {
+        $search = request()->query('search');
+        if ($search) {
+            $posts = Post::query()->where('active', '=', 1)->where('title', 'LIKE', "%{$search}%")->orderByDesc('id')->with('user')->with('tags')->paginate(5);
+        } else {
+            $posts = Post::query()->where('active', '=', 1)->orderByDesc('id')->with('user')->with('tags')->paginate(5);
+        }
         return view('posts', ['posts' => $posts]);
     }
 
